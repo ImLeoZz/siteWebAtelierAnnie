@@ -33,7 +33,7 @@ Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne 
 ## Installation
 
 ```bash
-git clone https://github.com/ton-utilisateur/siteWebAtelierAnnie.git
+git clone https://github.com/ImLeoZz/siteWebAtelierAnnie.git
 cd ton-repo
 ```
 
@@ -78,4 +78,8 @@ Le site doit inspirer confiance, montrer la qualité du travail artisanal et don
 
 ## Licence
 
+Ce projet est distribué sous licence **PolyForm Noncommercial 1.0.0** pour le code source.
+Vous pouvez l'utiliser, le modifier et le distribuer à des fins non commerciales uniquement.
+Voir le fichier LICENSE pour les termes complets.
 
+Le contenu visuel et textuel (design, photos, textes) est sous licence **CC BY-NC-ND 4.0**.
