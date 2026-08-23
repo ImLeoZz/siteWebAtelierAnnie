@@ -1,6 +1,9 @@
 Site vitrine professionnel pour présenter le savoir-faire d’une tapissière spécialisée dans la restauration de canapés, chaises 
 fauteuils.
 
+Le contenu visuel et textuel est sous licence CC BY-NC-ND 4.0.
+creativecommons.org/licenses/by-nc-nd/4.0
+
 ## À propos
 
 Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne afin de mettre en valeur :
@@ -72,11 +75,7 @@ Le site doit inspirer confiance, montrer la qualité du travail artisanal et don
 - Ajouter les mentions légales.
 - Optimiser le référencement local.
 
-## Contribution
-
-Les suggestions sont les bienvenues.  
-Si tu veux proposer une amélioration, ouvre une issue ou une pull request.
 
 ## Licence
 
-À définir.
+
