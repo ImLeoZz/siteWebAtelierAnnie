@@ -1,1 +1,236 @@
+/* =====================================================
+   L'Atelier d'Annie — style.css
+   Tapissier / restauration mobilier ancien
+   ===================================================== */
 
+body {
+    margin: 0;
+    font-family: Georgia, "Palatino Linotype", serif;
+    color: #2b2420;
+    background-color: #f3ecdf;
+    line-height: 1.65;
+    font-size: 17px;
+}
+
+body {
+    background-image:
+        repeating-linear-gradient(45deg, rgba(122, 82, 48, 0.05) 0, rgba(122, 82, 48, 0.05) 1px, transparent 1px, transparent 14px),
+        repeating-linear-gradient(-45deg, rgba(122, 82, 48, 0.05) 0, rgba(122, 82, 48, 0.05) 1px, transparent 1px, transparent 14px);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: #5b3a1e;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 1.35rem;
+    margin-top: 2.2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #c9855a;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.05rem;
+    margin-top: 1.4rem;
+    color: #7a5230;
+}
+
+p {
+    max-width: 62ch;
+}
+
+a {
+    color: #a0522d;
+    text-decoration: underline;
+    text-decoration-color: #c9855a55;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    text-decoration-color: #a0522d;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.1rem 5vw;
+    background-color: #ece2d0;
+    border-bottom: 3px double #7a5230;
+}
+
+.logo {
+    height: 46px;
+    width: auto;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+nav.nav-main ul {
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav.nav-main a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #4a3d30;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+nav.nav-main a:hover {
+    border-bottom-color: #7a5230;
+}
+
+/* ---------- Contenu principal ----------
+   Pas de "margin: 0 auto" symétrique : le contenu est ancré
+   à gauche avec une marge droite plus large, pour éviter
+   l'effet "colonne centrée" trop générique. */
+
+main {
+    max-width: 50rem;
+    padding: 0 4vw 3rem 6vw;
+    margin-right: auto;
+}
+
+section {
+    margin-top: 2.5rem;
+}
+
+.home ul {
+    padding-left: 1.1rem;
+    border-left: 3px solid #c9855a55;
+    margin-left: 0.3rem;
+}
+
+.home ul li {
+    margin-bottom: 1.1rem;
+    padding-left: 0.4rem;
+}
+
+.home ul li strong {
+    color: #5b3a1e;
+}
+
+/* ---------- Étapes ---------- */
+
+.step ol {
+    list-style: none;
+    counter-reset: etape;
+    padding-left: 0;
+}
+
+.step ol li.list {
+    counter-increment: etape;
+    position: relative;
+    padding-left: 2.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.step ol li.list::before {
+    content: counter(etape);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #7a5230;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #7a5230;
+    background: #f3ecdf;
+}
+
+.step ul {
+    margin-top: 1rem;
+}
+
+/* ---------- Réalisations ---------- */
+
+#realisation .map-realisation {
+    margin-top: 1.2rem;
+    padding: 1rem 1.2rem;
+    background-color: #ece2d0;
+    border-left: 4px solid #a0522d;
+    max-width: 40rem;
+}
+
+.map-realisation h3 {
+    margin-top: 0;
+}
+
+.map-realisation img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.7rem 0;
+    filter: sepia(15%);
+}
+
+/* ---------- Contact ---------- */
+
+.contact p {
+    font-size: 1.05rem;
+    background: #ece2d0;
+    display: inline-block;
+    padding: 0.9rem 1.3rem;
+    border: 1px solid #c9855a55;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    text-align: left;
+    font-size: 0.8rem;
+    color: #6b5f4f;
+    padding: 1.4rem 6vw;
+    background-color: #ece2d0;
+    border-top: 3px double #7a5230;
+}
+
+/* ---------- Petit ajustement mobile ---------- */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        margin-right: 0;
+    }
+
+    main {
+        padding: 0 5vw 2rem;
+    }
+
+    .footer {
+        text-align: left;
+        padding: 1.2rem 5vw;
+    }
+}
