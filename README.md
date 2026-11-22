@@ -1,25 +1,22 @@
-Site vitrine professionnel pour présenter le savoir-faire d’une tapissière spécialisée dans la restauration de canapés, chaises 
-fauteuils.
+# Atelier Annie
 
-Le contenu visuel et textuel est sous licence CC BY-NC-ND 4.0.
-creativecommons.org/licenses/by-nc-nd/4.0
+Site vitrine professionnel pour présenter le savoir-faire d'une tapissière spécialisée dans la restauration de canapés, chaises et fauteuils.
 
 ## À propos
 
 Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne afin de mettre en valeur :
 - les réalisations avant/après,
 - les services proposés,
-- l’expertise artisanale,
-- les coordonnées de contact,
-- les demandes de devis.
+- l'expertise artisanale,
+- les coordonnées de contact.
 
 ## Fonctionnalités
 
-- Présentation de l’activité.
+- Présentation de l'activité.
 - Galerie de réalisations.
-- Section services.
+- Section prestations.
 - Mise en avant des avant/après.
-- Formulaire de contact / demande de devis.
+- Page de contact.
 - Site responsive adapté aux mobiles.
 - Optimisation SEO de base.
 
@@ -27,59 +24,63 @@ Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne 
 
 - HTML
 - CSS
-- JavaScript
-- [ajoute ici ton framework si besoin]
+- JavaScript (sans framework, sans étape de build)
 
 ## Installation
 
 ```bash
 git clone https://github.com/ImLeoZz/siteWebAtelierAnnie.git
-cd ton-repo
+cd siteWebAtelierAnnie
 ```
 
-Si le projet utilise un framework :
+## Utilisation en local
+
+Le site est statique : il suffit d'ouvrir `index.html` dans un navigateur.
+
+Pour un rendu plus proche de la production (chemins relatifs, etc.), lancer un petit serveur local :
 
 ```bash
-npm install
-npm run dev
+python3 -m http.server 8000
 ```
 
-## Utilisation
-
-Lancer le projet en local puis ouvrir le site dans le navigateur.
-
-```bash
-npm run dev
-```
+Puis ouvrir http://localhost:8000.
 
 ## Structure du projet
 
-```bash
+```text
 /
 ├── index.html
+├── galerie.html
+├── prestations.html
+├── contact.html
 ├── assets/
 ├── css/
 ├── js/
+├── LICENSE
 └── README.md
 ```
 
-## Objectif du site
+## Déploiement
 
-Le site doit inspirer confiance, montrer la qualité du travail artisanal et donner envie aux visiteurs de contacter l’entreprise.
+Le site étant statique, il peut être hébergé gratuitement, par exemple via GitHub Pages :
+
+1. Sur GitHub, aller dans **Settings → Pages**.
+2. Dans **Source**, choisir **Deploy from a branch**.
+3. Sélectionner la branche `main` et le dossier `/ (root)`, puis enregistrer.
+4. Le site est disponible après quelques minutes sur `https://imleozz.github.io/siteWebAtelierAnnie/`.
+
+Un nom de domaine personnalisé peut ensuite être configuré dans la même page.
 
 ## À faire
 
 - Ajouter les photos des réalisations.
-- Rédiger les textes des services.
+- Rédiger les textes des prestations.
 - Préparer les informations de contact.
 - Ajouter les mentions légales.
 - Optimiser le référencement local.
-
+- Déployer le site en ligne.
 
 ## Licence
 
-Ce projet est distribué sous licence **PolyForm Noncommercial 1.0.0** pour le code source.
-Vous pouvez l'utiliser, le modifier et le distribuer à des fins non commerciales uniquement.
-Voir le fichier LICENSE pour les termes complets.
-
-Le contenu visuel et textuel (design, photos, textes) est sous licence **CC BY-NC-ND 4.0**.
+- **Code source** : licence **PolyForm Noncommercial 1.0.0**. Utilisation, modification et distribution autorisées à des fins non commerciales uniquement. Voir le fichier `LICENSE` pour les termes complets.
+- **Contenu visuel et textuel** (design, photos, textes) : licence [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
