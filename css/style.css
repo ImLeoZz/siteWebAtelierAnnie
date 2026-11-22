@@ -124,7 +124,14 @@ h1, h2, h3 {
   background: #fff;
 }
 
-.card img { width: 100%; display: block; height: 200px; object-fit: cover; }
+.card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
 .card-body { padding: 1.2rem; }
 .card-body h3 { margin-top: 0; }
 
