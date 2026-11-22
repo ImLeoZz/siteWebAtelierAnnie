@@ -15,8 +15,7 @@ Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne 
 - Présentation de l'activité.
 - Galerie de réalisations.
 - Section prestations.
-- Mise en avant des avant/après.
-- Page de contact.
+- Page de contact (coordonnées, sans formulaire).
 - Site responsive adapté aux mobiles.
 - Optimisation SEO de base.
 
@@ -26,20 +25,11 @@ Ce projet a pour objectif de créer un site vitrine clair, élégant et moderne 
 - CSS
 - JavaScript (sans framework, sans étape de build)
 
-## Installation
+## Utilisation en local
 
 ```bash
 git clone https://github.com/ImLeoZz/siteWebAtelierAnnie.git
 cd siteWebAtelierAnnie
-```
-
-## Utilisation en local
-
-Le site est statique : il suffit d'ouvrir `index.html` dans un navigateur.
-
-Pour un rendu plus proche de la production (chemins relatifs, etc.), lancer un petit serveur local :
-
-```bash
 python3 -m http.server 8000
 ```
 
@@ -47,38 +37,43 @@ Puis ouvrir http://localhost:8000.
 
 ## Structure du projet
 
+La racine du dépôt correspond exactement au contenu à placer dans `public_html/` sur o2switch.
+
 ```text
 /
 ├── index.html
-├── galerie.html
 ├── prestations.html
+├── galerie.html
 ├── contact.html
+├── 404.html
+├── robots.txt
+├── .htaccess
 ├── assets/
 ├── css/
-├── js/
-├── LICENSE
-└── README.md
+└── js/
 ```
 
-## Déploiement
+`README.md` et `LICENSE` ne sont pas nécessaires en ligne.
 
-Le site étant statique, il peut être hébergé gratuitement, par exemple via GitHub Pages :
+## Déploiement sur o2switch (cPanel)
 
-1. Sur GitHub, aller dans **Settings → Pages**.
-2. Dans **Source**, choisir **Deploy from a branch**.
-3. Sélectionner la branche `main` et le dossier `/ (root)`, puis enregistrer.
-4. Le site est disponible après quelques minutes sur `https://imleozz.github.io/siteWebAtelierAnnie/`.
-
-Un nom de domaine personnalisé peut ensuite être configuré dans la même page.
+1. Se connecter au cPanel o2switch.
+2. Envoyer le contenu du dépôt (pas le dossier lui-même) dans `public_html/` :
+   - via le Gestionnaire de fichiers (zip puis extraction),
+   - ou en FTP/SFTP,
+   - ou via Git Version Control (clone du dépôt public, puis copie vers `public_html/` avec un fichier `.cpanel.yml`).
+3. Ne pas envoyer le dossier `.git`.
+4. Vérifier que `index.html` est directement dans `public_html/`.
+5. Activer AutoSSL (certificat HTTPS) ; le `.htaccess` force ensuite la redirection HTTPS.
+6. Vérifier la casse des noms de fichiers (le serveur est sous Linux : `Logo.png` ≠ `logo.png`).
+7. Après une mise à jour, vider le cache navigateur (Ctrl+Shift+R).
 
 ## À faire
 
-- Ajouter les photos des réalisations.
-- Rédiger les textes des prestations.
-- Préparer les informations de contact.
-- Ajouter les mentions légales.
+- Compléter les coordonnées (adresse, téléphone, horaires) et le lien Facebook.
+- Ajouter les mentions légales (hébergeur : o2switch).
+- Optimiser les images (WebP, redimensionnées).
 - Optimiser le référencement local.
-- Déployer le site en ligne.
 
 ## Licence
 
