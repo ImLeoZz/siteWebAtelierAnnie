@@ -75,28 +75,21 @@ nav.main-nav ul li a.active {
   background: var(--rose-dark);
 }
 
-.hero { position: relative; }
-
-.hero img {
-  width: 100%;
-  display: block;
-  max-height: 520px;
-  object-fit: cover;
-}
-
 .hero-banner {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   left: 0;
+  width: fit-content;
+  max-width: 90%;
   background: rgba(50, 30, 34, 0.78);
   text-shadow: 0 1px 2px rgba(0,0,0,.25);
   color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 1.3rem;
-  max-width: 90%;
+  font-size: 1.2rem;
 }
+
 
 main {
   max-width: 1100px;
@@ -204,6 +197,33 @@ footer a { color: #ffffff; text-decoration: underline; }
 .gallery-grid figure { margin: 0; overflow: hidden; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 .gallery-grid img { width: 100%; height: 300px; object-fit: contain; display: block; background: #faf7f5; }
 .gallery-grid figcaption { padding: .75rem .9rem; font-size: .9rem; }
-.hero { min-height: 300px; overflow: hidden; background: linear-gradient(125deg,#773d4b,#c98577 58%,#ead7c5); }
-.hero img { height: min(52vw,520px); min-height: 300px; object-fit: cover; object-position: center 42%; }
-@media (max-width: 600px) { .hero-banner { bottom: 1rem; padding: .8rem 1rem; font-size: 1.05rem; } .gallery-grid img { height: 240px; } }
+.hero { position: relative; min-height: auto; overflow: hidden; background: linear-gradient(125deg,#773d4b,#c98577 58%,#ead7c5); }
+
+/* Base : l'image garde ses proportions, jamais rognée */
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* Mobile et tablette : texte sous l'image */
+@media (max-width: 900px) {
+  .hero-banner {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.05rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+}
+
+/* Mobile seulement : image un peu plus haute avec fond rose */
+@media (max-width: 600px) {
+  .hero img {
+    height: 160px;
+    background: #f9dbe3;
+  }
+}
